@@ -332,7 +332,7 @@ impl StatsEndpoint {
 impl Default for ServerConfig {
 	fn default() -> Self {
 		Self {
-			bind: (SocketType::default(), "127.0.0.1:4000".to_string()),
+			bind: (SocketType::default(), "0.0.0.0:4000".to_string()),
 			transport: SocketTransport::default(),
 			resolve_ipv6: false,
 			tcp_nodelay: true,
