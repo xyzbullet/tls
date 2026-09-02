@@ -1,0 +1,15 @@
+# Exported from Render on 2026-09-02T13:42:52Z
+version: "1"
+services:
+- type: web
+  name: alloys
+  runtime: rust
+  repo: https://github.com/xyzbullet/tls
+  plan: free
+  envVars:
+  - key: PORT
+    sync: false
+  region: oregon
+  buildCommand: cargo b -r
+  startCommand: target/release/epoxy-server
+  autoDeployTrigger: commit
